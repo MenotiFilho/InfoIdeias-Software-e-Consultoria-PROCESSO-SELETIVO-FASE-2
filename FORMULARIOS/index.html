@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="/style.css" />
+		<script src="/script.js" defer></script>
+		<title>Document</title>
+	</head>
+	<body>
+		<form>
+			<div class="titlediv">
+				<p class="title">Não encontrou o que procurava?</p>
+				<p class="title">Preencha o formulário e retornaremos o contato.</p>
+			</div>
+
+			<div class="componentes">
+				<label for="nome">Nome:</label>
+				<input type="text" id="nome" name="nome" required placeholder="NOME" />
+			</div>
+
+			<div class="componentes">
+				<label for="email">Endereço de e-mail:</label>
+				<input
+					type="email"
+					id="email"
+					name="email"
+					required
+					placeholder="E-MAIL"
+				/>
+			</div>
+
+			<div class="componentes">
+				<label for="telefone">Telefone:</label>
+				<input
+					type="tel"
+					id="telefone"
+					name="telefone"
+					pattern="\d{2}\d{4,5}\d{4}"
+					placeholder="DDD 9999-9999"
+					required
+				/>
+			</div>
+
+			<div class="componentes">
+				<label for="dataNascimento">Data de Nascimento:</label>
+				<input type="date" id="dataNascimento" name="dataNascimento" required />
+			</div>
+
+			<div class="componentes">
+				<label for="bairroInteresse">Bairro de interesse:</label>
+				<select id="bairroInteresse" name="bairroInteresse" required>
+					<option value=""></option>
+					<!-- Adicione mais opções aqui se desejar -->
+				</select>
+			</div>
+
+			<div class="componentes">
+				<label for="periodoContato">Período para contato:</label>
+
+				<div class="radioflex">
+					<div>
+						<input
+							type="radio"
+							id="manha"
+							name="periodoContato"
+							value="manha"
+							required
+						/>
+						<label for="manha">Manhã</label>
+					</div>
+
+					<div>
+						<input
+							type="radio"
+							id="tarde"
+							name="periodoContato"
+							value="tarde"
+							required
+						/>
+						<label for="tarde">Tarde</label>
+					</div>
+
+					<div>
+						<input
+							type="radio"
+							id="noite"
+							name="periodoContato"
+							value="noite"
+							required
+						/>
+						<label for="noite">Noite</label>
+					</div>
+				</div>
+			</div>
+
+			<div class="componentes">
+				<label for="autorizaContato">Autoriza contato por telefone:</label>
+
+				<div class="radioflex">
+					<div>
+						<input
+							type="radio"
+							id="sim"
+							name="autorizaContato"
+							value="sim"
+							required
+						/>
+						<label for="sim">Sim</label>
+					</div>
+					<div>
+						<input
+							type="radio"
+							id="nao"
+							name="autorizaContato"
+							value="nao"
+							required
+						/>
+						<label for="nao">Não</label>
+					</div>
+				</div>
+			</div>
+			<button type="submit">Enviar</button>
+		</form>
+	</body>
+</html>
